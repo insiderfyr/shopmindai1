@@ -1,11 +1,2 @@
-'use client'
-
-import * as React from 'react'
-import {
-  ThemeProvider as NextThemesProvider,
-  type ThemeProviderProps,
-} from 'next-themes'
-
-export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
-  return <NextThemesProvider {...props}>{children}</NextThemesProvider>
-}
+// This file is no longer needed - theme functionality is handled in theme-toggle.tsx
+// Keeping this file to avoid import errors during cleanup
