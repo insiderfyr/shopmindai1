@@ -14,7 +14,6 @@ const inter = Inter({
 
 // Proper metadata export for better SEO
 export const metadata: Metadata = {
-  metadataBase: new URL('https://shopmindai.com'), // This fixes the metadataBase warning
   title: "ShopMindAI - Your Personalized AI Shopping Assistant",
   description: "Skip the endless scrolling. Shop smarter with AI-powered personalized recommendations across top retailers. Find the perfect products in seconds, not hours.",
   keywords: ["AI shopping", "personalized recommendations", "smart shopping", "product search", "online shopping assistant"],
