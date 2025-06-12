@@ -1,6 +1,5 @@
 import Header from "@/components/header";
 import Footer from "@/components/footer";
-import Breadcrumb from "@/components/breadcrumb";
 import Head from "next/head";
 
 export default function AccessibilityStatement() {
@@ -16,7 +15,6 @@ export default function AccessibilityStatement() {
         <meta name="description" content="ShopMindAI Accessibility Statement" />
       </Head>
       <Header />
-      <Breadcrumb items={breadcrumbItems} />
       <main className="flex-grow container mx-auto px-4 py-8 md:py-12 bg-white dark:bg-gray-800 text-gray-900 dark:text-gray-100 shadow-lg rounded-lg my-8">
         <h1 className="text-4xl font-bold mb-6 text-center text-[#3B82F6] dark:text-[#6d9eff]">
           Accessibility Statement

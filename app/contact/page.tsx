@@ -4,17 +4,16 @@ import { useState } from "react"
 import type { Metadata } from "next"
 import Header from "@/components/header"
 import Footer from "@/components/footer"
-import Breadcrumb from "@/components/breadcrumb"
 import { Mail, Phone, MessageSquare, Send } from "lucide-react"
 
-const metadata: Metadata = {
-  title: "Contact Us - ShopMindAI",
-  description: "Contact ShopMindAI for support or inquiries about your AI shopping assistant",
-  openGraph: {
-    title: "Contact Us - ShopMindAI", 
-    description: "Contact ShopMindAI for support or inquiries about your AI shopping assistant",
-  },
-}
+// const metadata: Metadata = {
+//   title: "Contact Us - ShopMindAI",
+//   description: "Contact ShopMindAI for support or inquiries about your AI shopping assistant",
+//   openGraph: {
+//     title: "Contact Us - ShopMindAI", 
+//     description: "Contact ShopMindAI for support or inquiries about your AI shopping assistant",
+//   },
+// }
 
 export default function Contact() {
   const breadcrumbItems = [
@@ -57,7 +56,6 @@ export default function Contact() {
   return (
     <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#e6f0ff] to-[#d8e8ff] dark:from-[#1a1a2e] dark:to-[#16213e] transition-all duration-300">
       <Header />
-      <Breadcrumb items={breadcrumbItems} />
       
       <main className="flex-grow container mx-auto px-4 py-8 md:py-12">
         <div className="max-w-6xl mx-auto">
