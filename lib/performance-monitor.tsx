@@ -31,9 +31,9 @@ export const usePerformanceMonitor = () => {
         }
         
         // Cumulative Layout Shift
-        if (entry.entryType === 'layout-shift' && !entry.hadRecentInput) {
-          if (entry.value > 0.1) {
-            console.warn('🚨 CLS > 0.1:', entry.value)
+        if (entry.entryType === 'layout-shift' && !(entry as any).hadRecentInput) {
+          if ((entry as any).value > 0.1) {
+            console.warn('🚨 CLS > 0.1:', (entry as any).value)
           }
         }
 
