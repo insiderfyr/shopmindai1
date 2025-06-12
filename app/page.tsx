@@ -6,6 +6,7 @@ import Header from "@/components/header"
 import Footer from "@/components/footer"
 import HowItWorksSection from "@/components/how-it-works-section"
 import FeaturesSection from "@/components/features-section"
+import PremiumStoresSection from "@/components/premium-stores-section"
 
 export default function Home() {
   const [mounted, setMounted] = useState(false)
@@ -45,13 +46,14 @@ export default function Home() {
           className="flex-grow flex flex-col items-center justify-center px-4 pt-8 pb-10 md:pt-10 md:pb-12 text-center"
           aria-labelledby="hero-heading"
         >
+          {/* Main Hero Content */}
           <div className="max-w-4xl mx-auto">
             <h1 
               id="hero-heading"
               className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight"
             >
               <span className="text-black dark:text-white font-sans">ShopMind</span>
-              <span className="text-black dark:text-white font-sans">AI</span>
+              <span className="text-[#4d8eff] font-sans">AI</span>
             </h1>
 
             <p className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 text-gray-800 dark:text-gray-200 leading-relaxed">
@@ -64,7 +66,7 @@ export default function Home() {
 
             <Link
               href="https://shopmindai.com/app"
-              className="bg-[#4d8eff] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#3a6cd9] inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="bg-[#4d8eff] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#3a6cd9] inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none"
               aria-label="Start shopping with ShopMindAI"
             >
               Start Shopping
@@ -121,25 +123,7 @@ export default function Home() {
 
         <HowItWorksSection />
         <FeaturesSection />
-
-        {/* Stores Section */}
-        <section 
-          id="stores" 
-          className="w-full py-12 text-center bg-[#f0f8ff] dark:bg-[#0a1128] transition-all duration-300 text-gray-900 dark:text-white"
-          aria-labelledby="stores-heading"
-        >
-          <div className="max-w-4xl mx-auto px-4">
-            <h2 
-              id="stores-heading"
-              className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white"
-            >
-              Stores
-            </h2>
-            <p className="text-lg md:text-xl text-gray-700 dark:text-gray-300 mb-8">
-              Coming soon: Integration with the largest online retailers!
-            </p>
-          </div>
-        </section>
+        <PremiumStoresSection />
       </main>
 
       <Footer />

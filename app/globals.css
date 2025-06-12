@@ -1,0 +1,385 @@
+/* SCALABLE PERFORMANCE ANIMATIONS - Optimized for Millions of Users */
+
+/* Reduced Motion First - Performance Priority */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Hero Background Brand Animations - Performance Optimized */
+@keyframes scrollLeftSlow {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes scrollRightSlow {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+/* Throttled animations for scale */
+.animate-scroll-left-slow {
+  animation: scrollLeftSlow 90s linear infinite;
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+.animate-scroll-right-slow {
+  animation: scrollRightSlow 80s linear infinite;
+  will-change: transform;
+  transform: translateZ(0); /* Force hardware acceleration */
+}
+
+/* Stores Carousel - Performance Optimized */
+@keyframes scrollLeft {
+  from { transform: translate3d(0, 0, 0); }
+  to { transform: translate3d(-50%, 0, 0); }
+}
+
+@keyframes scrollRight {
+  from { transform: translate3d(-50%, 0, 0); }
+  to { transform: translate3d(0, 0, 0); }
+}
+
+.animate-scroll-left {
+  animation: scrollLeft 60s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+.animate-scroll-right {
+  animation: scrollRight 55s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
+}
+
+/* Performance optimizations for scale */
+.animate-scroll-left:hover,
+.animate-scroll-right:hover,
+.animate-scroll-left-slow:hover,
+.animate-scroll-right-slow:hover {
+  animation-play-state: paused;
+}
+
+/* CPU throttling for mobile devices */
+@media (max-width: 768px) {
+  .animate-scroll-left-slow {
+    animation-duration: 60s;
+  }
+  .animate-scroll-right-slow {
+    animation-duration: 55s;
+  }
+  .animate-scroll-left {
+    animation-duration: 45s;
+  }
+  .animate-scroll-right {
+    animation-duration: 40s;
+  }
+}
+
+/* Ultra low-end device detection and throttling */
+@media (max-width: 480px) {
+  .animate-scroll-left-slow,
+  .animate-scroll-right-slow,
+  .animate-scroll-left,
+  .animate-scroll-right {
+    animation-duration: 120s; /* Very slow on low-end */
+  }
+}
+
+/* Intersection Observer optimizations */
+.carousel-item {
+  content-visibility: auto;
+  contain-intrinsic-size: 200px 60px;
+}
+
+/* Memory leak prevention */
+@media (prefers-reduced-motion: reduce) {
+  .animate-scroll-left-slow,
+  .animate-scroll-right-slow,
+  .animate-scroll-left,
+  .animate-scroll-right {
+    animation: none;
+    transform: none;
+    will-change: auto;
+  }
+}@tailwind base;
+@tailwind components; 
+@tailwind utilities;
+
+/* CSS Custom Properties for Performance */
+:root {
+  /* Color System */
+  --primary-blue: #4d8eff;
+  --primary-blue-hover: #3a6cd9;
+  --light-bg: #e6f0ff;
+  --light-bg-secondary: #d6e7ff;
+  --dark-bg: #1a1a2e;
+  --dark-bg-secondary: #16213e;
+  
+  /* Optimized CSS Variables */
+  --background-start-rgb: 230, 240, 255;
+  --background-end-rgb: 216, 232, 255;
+  --foreground-rgb: 0, 0, 0;
+  
+  /* Performance-optimized radius */
+  --radius: 0.5rem;
+  
+  /* Typography scale */
+  --font-sans: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.dark {
+  --background-start-rgb: 26, 26, 46;
+  --background-end-rgb: 22, 33, 62;
+  --foreground-rgb: 255, 255, 255;
+}
+
+@layer base {
+  /* Performance-optimized base styles */
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    /* Enhanced smooth scrolling */
+    scroll-padding-top: 80px; /* Account for fixed header */
+  }
+
+  body {
+    font-family: var(--font-sans);
+    color: rgb(var(--foreground-rgb));
+    background: linear-gradient(135deg, rgb(var(--background-start-rgb)) 0%, rgb(var(--background-end-rgb)) 100%);
+    min-height: 100vh;
+    line-height: 1.6;
+    
+    /* Optimized font rendering */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    font-feature-settings: "liga" 1, "kern" 1;
+    letter-spacing: -0.01em;
+    
+    /* Prevent layout shift and improve loading */
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    will-change: auto;
+    
+    /* Prevent flash of unstyled content */
+    visibility: visible;
+  }
+  
+  /* Smooth loading state */
+  body.loading {
+    opacity: 0;
+  }
+  
+  /* Prevent cumulative layout shift */
+  img, svg, video {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Unicorn SVG transitions */
+  svg {
+    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  
+  svg:hover {
+    transform: translateY(-1px) scale(1.05);
+    filter: drop-shadow(0 4px 8px rgba(77, 142, 255, 0.3));
+  }
+  
+  /* Smooth focus transitions */
+  * {
+    transition: outline 0.15s ease-in-out;
+  }
+  
+  /* Genius scroll highlight effect */
+  .scroll-highlight {
+    animation: scrollHighlight 2s ease-out;
+    transform: translateZ(0); /* Hardware acceleration */
+  }
+  
+  @keyframes scrollHighlight {
+    0% {
+      background-color: rgba(77, 142, 255, 0.1);
+      transform: scale(1.002);
+    }
+    50% {
+      background-color: rgba(77, 142, 255, 0.05);
+    }
+    100% {
+      background-color: transparent;
+      transform: scale(1);
+    }
+  }
+
+  /* Focus styles for accessibility - no blue ring */
+  :focus-visible {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(77, 142, 255, 0.3);
+    border-radius: 4px;
+  }
+  
+  /* Remove blue outline for buttons and links */
+  button:focus,
+  a:focus,
+  input:focus,
+  textarea:focus,
+  select:focus {
+    outline: none;
+  }
+}
+
+@layer components {
+  /* High-performance button component */
+  .btn-primary {
+    @apply bg-[#4d8eff] text-white px-6 py-2 rounded-full font-medium;
+    @apply hover:bg-[#3a6cd9] focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+    @apply transition-colors duration-200 ease-in-out;
+    @apply transform-gpu; /* Hardware acceleration */
+  }
+  
+  /* Optimized header backdrop */
+  .header-backdrop {
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    background-color: rgba(230, 240, 255, 0.9);
+    will-change: transform; /* Performance hint */
+  }
+  
+  .dark .header-backdrop {
+    background-color: rgba(26, 26, 46, 0.9);
+  }
+}
+
+@layer utilities {
+  /* Performance-optimized animations */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out forwards;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+  
+  .animate-scale-in {
+    animation: scaleIn 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  }
+  
+  /* Hardware-accelerated transforms */
+  .transform-gpu {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+  
+  /* Optimized transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  .transition-fast {
+    transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Genius scroll progress indicator */
+  .scroll-active {
+    position: relative;
+  }
+  
+  .scroll-active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #4d8eff, transparent);
+    animation: scrollProgress 0.6s ease-out;
+  }
+  
+  @keyframes scrollProgress {
+    0% {
+      width: 0%;
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      width: 100%;
+      opacity: 0;
+    }
+  }
+}
+
+/* Optimized Keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Critical CSS for above-the-fold content */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-section {
+    animation: fadeIn 1s ease-out;
+  }
+}
+
+/* Responsive optimizations */
+@media (max-width: 768px) {
+  .header-backdrop {
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+  }
+}
+
+/* Print styles optimization */
+@media print {
+  * {
+    color: black !important;
+    background: white !important;
+  }
+}

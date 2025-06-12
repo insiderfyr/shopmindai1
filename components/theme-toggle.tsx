@@ -62,8 +62,8 @@ export default function ThemeToggle() {
   // Prevent hydration mismatch and layout shift
   if (!mounted || darkMode === null) {
     return (
-      <div className="p-1.5 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-300">
-        <div className="w-4 h-4" />
+      <div className="p-1.5 rounded-full bg-gray-200 dark:bg-gray-700 transition-colors duration-300" style={{ width: '28px', height: '28px' }}>
+        <div className="w-4 h-4 opacity-0" />
       </div>
     )
   }
@@ -71,7 +71,7 @@ export default function ThemeToggle() {
   return (
     <button
       onClick={toggleTheme}
-      className="p-1.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+      className="p-1.5 rounded-full bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-white transition-colors duration-300 focus:outline-none"
       aria-label={`Switch to ${darkMode ? 'light' : 'dark'} mode`}
       type="button"
     >
