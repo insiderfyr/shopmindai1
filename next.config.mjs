@@ -1,23 +1,20 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  // Production optimizations
+  // Basic production optimizations
   eslint: {
-    ignoreDuringBuilds: false, // Enable ESLint checking
+    ignoreDuringBuilds: false,
   },
   typescript: {
-    ignoreBuildErrors: false, // Enable TypeScript checking
+    ignoreBuildErrors: false,
   },
   
-  // Performance optimizations
+  // Essential performance optimizations
   images: {
-    unoptimized: false, // Enable Next.js image optimization
+    unoptimized: false,
     formats: ['image/webp', 'image/avif'],
-    minimumCacheTTL: 31536000, // 1 year cache
+    minimumCacheTTL: 31536000,
     dangerouslyAllowSVG: true,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
-    remotePatterns: [
-      // Add domains if you use external images
-    ],
   },
   
   // Compression and headers
@@ -27,34 +24,17 @@ const nextConfig = {
   // Compiler optimizations
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production' ? {
-      exclude: ['error'] // Keep console.error in production
+      exclude: ['error']
     } : false,
   },
   
-  // Experimental features for performance
+  // Minimal experimental features to avoid conflicts
   experimental: {
-    optimizeCss: true,
-    optimizePackageImports: ['lucide-react'],
     scrollRestoration: true,
-    webVitalsAttribution: ['CLS', 'LCP'],
+    optimizePackageImports: ['lucide-react'],
   },
   
-  // Server external packages (moved from experimental in Next.js 15+)
-  serverExternalPackages: [],
-  
-  // Bundle analyzer
-  ...(process.env.ANALYZE === 'true' && {
-    webpack: (config) => {
-      config.plugins.push(
-        new (require('@next/bundle-analyzer'))({
-          enabled: true,
-        })
-      )
-      return config
-    },
-  }),
-  
-  // Security and performance headers
+  // Security headers
   async headers() {
     return [
       {
@@ -79,15 +59,6 @@ const nextConfig = {
           {
             key: 'Referrer-Policy',
             value: 'origin-when-cross-origin'
-          }
-        ]
-      },
-      {
-        source: '/static/:path*',
-        headers: [
-          {
-            key: 'Cache-Control',
-            value: 'public, max-age=31536000, immutable'
           }
         ]
       }

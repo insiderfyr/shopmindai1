@@ -35,3 +35,33 @@ next-env.d.ts
 # OS
 .DS_Store
 Thumbs.db
+
+# Claude Desktop Config (poate conține path-uri locale)
+.claude_desktop_config.json
+.claude_desktop_config.json.backup
+
+# Optimization files (pot fi regenerate)
+*.optimized
+package-optimization.json
+pnpm-lock.yaml.optimized
+next.config.optimized.mjs
+tsconfig.optimized.json
+package.json.optimized
+package-lock.json.optimized
+
+# Backup files
+*.backup
+test.txt.backup
+
+# Batch/Shell scripts (specifice sistemului local)
+*.bat
+*.sh
+start-mcp.*
+optimize.*
+quick-fix.*
+
+# Lighthouse reports
+lighthouse-report.html
+
+# Verification scripts
+verify-optimization.js
