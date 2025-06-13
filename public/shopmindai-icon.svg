@@ -1,0 +1,66 @@
+<svg width="512" height="512" viewBox="0 0 512 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#4F46E5;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#7C3AED;stop-opacity:1" />
+    </linearGradient>
+    <linearGradient id="brain-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#ffffff;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#e0e7ff;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="512" height="512" rx="120" fill="url(#bg-gradient)"/>
+  
+  <!-- AI Brain Circuit Pattern -->
+  <g opacity="0.2">
+    <path d="M160 160h32v32h-32z M320 160h32v32h-32z M240 128h32v32h-32z" fill="white"/>
+    <path d="M176 176h144m-144 0v80m144-80v80" stroke="white" stroke-width="4" fill="none"/>
+  </g>
+  
+  <!-- Shopping Cart with AI Brain -->
+  <g transform="translate(256, 256)">
+    <!-- Cart Body -->
+    <path d="M-80 -40 Q-80 -60 -60 -60 L60 -60 Q80 -60 80 -40 L80 40 Q80 60 60 60 L-60 60 Q-80 60 -80 40 Z" 
+          fill="url(#brain-gradient)" 
+          stroke="white" 
+          stroke-width="8"/>
+    
+    <!-- AI Neural Network inside cart -->
+    <g>
+      <!-- Central node -->
+      <circle cx="0" cy="0" r="16" fill="#4F46E5"/>
+      
+      <!-- Connected nodes -->
+      <circle cx="-40" cy="-20" r="12" fill="#7C3AED"/>
+      <circle cx="40" cy="-20" r="12" fill="#7C3AED"/>
+      <circle cx="-40" cy="20" r="12" fill="#7C3AED"/>
+      <circle cx="40" cy="20" r="12" fill="#7C3AED"/>
+      
+      <!-- Connections -->
+      <path d="M0,0 L-40,-20 M0,0 L40,-20 M0,0 L-40,20 M0,0 L40,20" 
+            stroke="#4F46E5" 
+            stroke-width="3" 
+            opacity="0.6"/>
+    </g>
+    
+    <!-- Cart Handle -->
+    <path d="M-60 -60 Q-60 -100 -20 -100 L20 -100 Q60 -100 60 -60" 
+          fill="none" 
+          stroke="white" 
+          stroke-width="8" 
+          stroke-linecap="round"/>
+    
+    <!-- Cart Wheels -->
+    <circle cx="-50" cy="80" r="16" fill="white"/>
+    <circle cx="50" cy="80" r="16" fill="white"/>
+  </g>
+  
+  <!-- Sparkle effects for AI -->
+  <g opacity="0.8">
+    <path d="M380 140 L390 150 L380 160 L370 150 Z" fill="white"/>
+    <path d="M140 340 L150 350 L140 360 L130 350 Z" fill="white"/>
+    <path d="M400 360 L405 365 L400 370 L395 365 Z" fill="white"/>
+  </g>
+</svg>

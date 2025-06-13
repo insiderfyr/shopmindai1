@@ -110,11 +110,21 @@ export default function RootLayout({
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         
-        {/* Favicon and app icons */}
-        <link rel="icon" href="/favicon.ico" sizes="32x32" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+        {/* Favicon and app icons - Silicon Valley Grade */}
+        <link rel="icon" href="/favicon.ico" sizes="any" />
+        <link rel="icon" href="/shopmindai-icon.svg" type="image/svg+xml" />
+        <link rel="icon" href="/favicon-16x16.png" sizes="16x16" type="image/png" />
+        <link rel="icon" href="/favicon-32x32.png" sizes="32x32" type="image/png" />
+        <link rel="icon" href="/favicon-96x96.png" sizes="96x96" type="image/png" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-120x120.png" sizes="120x120" />
+        <link rel="apple-touch-icon" href="/apple-touch-icon-152x152.png" sizes="152x152" />
+        <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#4F46E5" />
         <link rel="manifest" href="/manifest.json" />
+        <meta name="msapplication-TileColor" content="#4F46E5" />
+        <meta name="msapplication-TileImage" content="/mstile-144x144.png" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
+        <meta name="theme-color" content="#4F46E5" />
         
         {/* Additional performance hints */}
         <link rel="dns-prefetch" href="//fonts.googleapis.com" />
