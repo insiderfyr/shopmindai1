@@ -1,21 +1,13 @@
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
-  <g transform="translate(256, 256)">
-    <!-- Simplified monochrome version for Safari -->
-    <!-- Cart Body -->
-    <path d="M-80 -40 Q-80 -60 -60 -60 L60 -60 Q80 -60 80 -40 L80 40 Q80 60 60 60 L-60 60 Q-80 60 -80 40 Z" fill="#000000"/>
+  <!-- Safari pinned tab - monochrome version of S logo -->
+  <g transform="scale(2.67)">
+    <!-- S-shaped lightning bolt -->
+    <path d="M48 144V120H72V96H96V72H120V48H144V72H120V96H96V120H72V144H48Z" fill="#000000"/>
     
-    <!-- AI Neural Network -->
-    <circle cx="0" cy="0" r="16" fill="#000000"/>
-    <circle cx="-40" cy="-20" r="12" fill="#000000"/>
-    <circle cx="40" cy="-20" r="12" fill="#000000"/>
-    <circle cx="-40" cy="20" r="12" fill="#000000"/>
-    <circle cx="40" cy="20" r="12" fill="#000000"/>
+    <!-- Top dot -->
+    <circle cx="132" cy="60" r="12" fill="#000000"/>
     
-    <!-- Cart Handle -->
-    <path d="M-60 -60 Q-60 -100 -20 -100 L20 -100 Q60 -100 60 -60" fill="none" stroke="#000000" stroke-width="12"/>
-    
-    <!-- Cart Wheels -->
-    <circle cx="-50" cy="80" r="16" fill="#000000"/>
-    <circle cx="50" cy="80" r="16" fill="#000000"/>
+    <!-- Bottom base -->
+    <path d="M60 132C60 126.477 64.4772 122 70 122H122C127.523 122 132 126.477 132 132V132C132 137.523 127.523 142 122 142H70C64.4772 142 60 137.523 60 132V132Z" fill="#000000"/>
   </g>
 </svg>
