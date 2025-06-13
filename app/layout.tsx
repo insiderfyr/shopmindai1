@@ -92,8 +92,8 @@ export const viewport: Viewport = {
   maximumScale: 5,
   userScalable: true,
   themeColor: [
-    { media: '(prefers-color-scheme: light)', color: '#4d8eff' },
-    { media: '(prefers-color-scheme: dark)', color: '#6d9eff' },
+    { media: '(prefers-color-scheme: light)', color: '#1e40af' },
+    { media: '(prefers-color-scheme: dark)', color: '#1e3a8a' },
   ],
   colorScheme: 'light dark',
 }
@@ -137,13 +137,14 @@ export default function RootLayout({
               (function() {
                 try {
                   var theme = localStorage.getItem('theme');
-                  if (theme === 'dark') {
-                    document.documentElement.classList.add('dark');
-                  } else {
+                  // Dacă nu există temă salvată, folosește light mode ca default
+                  if (!theme || theme === 'light') {
                     document.documentElement.classList.remove('dark');
+                  } else if (theme === 'dark') {
+                    document.documentElement.classList.add('dark');
                   }
                 } catch (e) {
-                  // Fallback to light theme
+                  // Fallback la light theme
                   document.documentElement.classList.remove('dark');
                 }
               })();

@@ -5,7 +5,7 @@
   "start_url": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#ffffff",
+  "background_color": "transparent",
   "theme_color": "#1e40af",
   "id": "/?source=pwa",
   "scope": "/",
@@ -53,7 +53,7 @@
       "purpose": "maskable"
     },
     {
-      "src": "/shopmindai-icon.svg",
+      "src": "/icon.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
