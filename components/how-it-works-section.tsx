@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useRef, memo } from "react"
-import { MessageSquare, Search, ShoppingBag } from "lucide-react"
+import { MessageCircle, Search, ShoppingCart } from "lucide-react"
 
 const HowItWorksSection = memo(function HowItWorksSection() {
   const sectionRef = useRef<HTMLElement>(null)
@@ -33,7 +33,7 @@ const HowItWorksSection = memo(function HowItWorksSection() {
 
   const steps = [
     {
-      icon: MessageSquare,
+      icon: MessageCircle,
       title: "1. Ask",
       description: "Tell us what you're looking for",
     },
@@ -43,7 +43,7 @@ const HowItWorksSection = memo(function HowItWorksSection() {
       description: "We search across top retailers",
     },
     {
-      icon: ShoppingBag,
+      icon: ShoppingCart,
       title: "3. Buy",
       description: "You pick and shop smarter",
     },

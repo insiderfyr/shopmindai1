@@ -16,7 +16,7 @@ const Header = memo(function Header() {
   }
 
   return (
-    <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-[#e6f0ff] dark:bg-[#1a1a2e] transition-all duration-300 will-change-transform">
+    <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-blue-50 dark:bg-gray-900 transition-all duration-300 will-change-transform">
       <div className="flex items-center">
         <div className="w-10 h-10 relative mr-2 md:w-12 md:h-12 md:mr-3 pt-7 transition-all duration-500 ease-out">
           <Image 

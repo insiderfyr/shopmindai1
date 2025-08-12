@@ -18,7 +18,7 @@ export default function Home() {
   // Prevent hydration mismatch
   if (!mounted) {
     return (
-      <div className="min-h-screen bg-gradient-to-b from-[#e6f0ff] to-[#d8e8ff] dark:from-[#1a1a2e] dark:to-[#16213e]">
+      <div className="min-h-screen bg-blue-50 dark:bg-gray-900">
         <div className="animate-pulse">
           <div className="h-16 bg-gray-200 dark:bg-gray-800" />
           <div className="h-96 bg-gray-100 dark:bg-gray-900" />
@@ -28,7 +28,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-gradient-to-b from-[#e6f0ff] to-[#d8e8ff] dark:from-[#1a1a2e] dark:to-[#16213e] transition-all duration-300">
+    <div className="min-h-screen flex flex-col bg-blue-50 dark:bg-gray-900 transition-all duration-300">
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"
