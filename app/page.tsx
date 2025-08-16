@@ -28,7 +28,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col bg-blue-50 dark:bg-gray-900 transition-all duration-300">
+    <div className="min-h-screen flex flex-col bg-blue-50 dark:bg-[#182533] transition-all duration-300">
       {/* Skip to main content for accessibility */}
       <a
         href="#main-content"

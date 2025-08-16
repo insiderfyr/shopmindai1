@@ -56,7 +56,7 @@ const PremiumStoresSection = memo(function PremiumStoresSection() {
     <section 
       id="stores" 
       ref={sectionRef}
-      className="w-full py-12 text-center bg-[#f0f8ff] dark:bg-[#0a1128] transition-all duration-300 text-gray-900 dark:text-white overflow-hidden"
+      className="w-full py-12 text-center bg-[#f0f8ff] dark:bg-[#182533] transition-all duration-300 text-gray-900 dark:text-white overflow-hidden"
       aria-labelledby="stores-heading"
     >
       <div className="max-w-4xl mx-auto px-4">

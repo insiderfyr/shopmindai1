@@ -68,7 +68,7 @@ const FeaturesSection = memo(function FeaturesSection() {
     <section 
       id="features" 
       ref={sectionRef} 
-      className="py-20 px-6 md:px-16 bg-gray-50 dark:bg-gray-900/50 transition-all duration-300"
+      className="py-20 px-6 md:px-16 bg-gray-50 dark:bg-[#182533]/50 transition-all duration-300"
       aria-labelledby="features-heading"
     >
       <div className="max-w-6xl mx-auto">
