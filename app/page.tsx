@@ -47,27 +47,59 @@ export default function Home() {
           aria-labelledby="hero-heading"
         >
           {/* Main Hero Content */}
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-4xl mx-auto animate-fade-in-up">
             <h1 
               id="hero-heading"
-              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight"
+              className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight animate-fade-in-up-delay-1"
+              style={{
+                textShadow: '0 4px 20px rgba(0, 0, 0, 0.15), 0 8px 40px rgba(77, 142, 255, 0.2), 0 0 60px rgba(77, 142, 255, 0.1)',
+                filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1))'
+              }}
             >
-              <span className="text-black dark:text-white font-sans">ShopMind</span>
-              <span className="text-[#4d8eff] font-sans">AI</span>
+              <span 
+                className="text-black dark:text-white font-sans inline-block animate-slide-in-left"
+                style={{
+                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3), 4px 4px 16px rgba(0, 0, 0, 0.2)',
+                  filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15))'
+                }}
+              >
+                ShopMind
+              </span>
+              <span 
+                className="text-[#4d8eff] font-sans inline-block animate-slide-in-right"
+                style={{
+                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.4), 4px 4px 20px rgba(77, 142, 255, 0.5), 0 0 40px rgba(77, 142, 255, 0.3)',
+                  filter: 'drop-shadow(0 6px 20px rgba(77, 142, 255, 0.4))'
+                }}
+              >
+                AI
+              </span>
             </h1>
 
-            <p className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 text-gray-800 dark:text-gray-200 leading-relaxed">
+            <p className="text-lg md:text-2xl font-semibold mb-2 md:mb-3 text-gray-800 dark:text-gray-200 leading-relaxed animate-fade-in-up-delay-2"
+               style={{
+                 textShadow: '0 2px 8px rgba(0, 0, 0, 0.15), 0 4px 16px rgba(0, 0, 0, 0.1)',
+                 filter: 'drop-shadow(0 3px 10px rgba(0, 0, 0, 0.1))'
+               }}>
               Your Personalized AI Shopping Assistant
             </p>
 
-            <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 mb-5 md:mb-6 max-w-2xl mx-auto leading-relaxed">
+            <p className="text-sm md:text-lg text-gray-700 dark:text-gray-300 mb-5 md:mb-6 max-w-2xl mx-auto leading-relaxed animate-fade-in-up-delay-3"
+               style={{
+                 textShadow: '0 1px 4px rgba(0, 0, 0, 0.1), 0 2px 8px rgba(0, 0, 0, 0.08)',
+                 filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08))'
+               }}>
               Skip the endless scrolling. Shop smarter with AI.
             </p>
 
             <Link
-              href="https://shopmindai.com/app"
-              className="bg-[#4d8eff] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-300 hover:bg-[#3a6cd9] inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none"
+              href="http://localhost:3090/login"
+              className="bg-gradient-to-r from-[#4d8eff] to-[#6d9eff] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-500 hover:from-[#3a6cd9] hover:to-[#5a7cd9] inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105 border border-white/20 animate-fade-in-up-delay-4"
               aria-label="Start shopping with ShopMindAI"
+              style={{
+                boxShadow: '0 15px 50px rgba(77, 142, 255, 0.4), 0 8px 25px rgba(77, 142, 255, 0.3), 0 0 60px rgba(77, 142, 255, 0.2)',
+                filter: 'drop-shadow(0 10px 30px rgba(77, 142, 255, 0.3))'
+              }}
             >
               Start Shopping
             </Link>
