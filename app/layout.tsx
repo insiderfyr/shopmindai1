@@ -3,8 +3,6 @@ import type React from "react"
 import "./globals.css"
 import { Inter } from "next/font/google"
 import SmoothLoader from "@/components/smooth-loader"
-import { StagewiseToolbar } from "@stagewise/toolbar-next"
-import ReactPlugin from "@stagewise-plugins/react"
 
 // Optimized font loading with performance improvements
 const inter = Inter({ 
@@ -157,11 +155,6 @@ export default function RootLayout({
       <body className={`${inter.className} font-sans antialiased loading`} suppressHydrationWarning>
         <SmoothLoader />
         {children}
-        <StagewiseToolbar 
-          config={{
-            plugins: [ReactPlugin]
-          }}
-        />
       </body>
     </html>
   )
