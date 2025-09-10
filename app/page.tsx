@@ -52,15 +52,15 @@ export default function Home() {
               id="hero-heading"
               className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight animate-fade-in-up-delay-1"
               style={{
-                textShadow: '0 4px 20px rgba(0, 0, 0, 0.15), 0 8px 40px rgba(77, 142, 255, 0.2), 0 0 60px rgba(77, 142, 255, 0.1)',
-                filter: 'drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1))'
+                textShadow: '0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(77, 142, 255, 0.1), 0 0 24px rgba(77, 142, 255, 0.05)',
+                filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05))'
               }}
             >
               <span 
                 className="text-black dark:text-white font-sans inline-block animate-slide-in-left"
                 style={{
-                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.3), 4px 4px 16px rgba(0, 0, 0, 0.2)',
-                  filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.15))'
+                  textShadow: '1px 1px 4px rgba(0, 0, 0, 0.15), 2px 2px 8px rgba(0, 0, 0, 0.1)',
+                  filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08))'
                 }}
               >
                 ShopMind
@@ -68,8 +68,8 @@ export default function Home() {
               <span 
                 className="text-[#4d8eff] font-sans inline-block animate-slide-in-right"
                 style={{
-                  textShadow: '2px 2px 8px rgba(0, 0, 0, 0.4), 4px 4px 20px rgba(77, 142, 255, 0.5), 0 0 40px rgba(77, 142, 255, 0.3)',
-                  filter: 'drop-shadow(0 6px 20px rgba(77, 142, 255, 0.4))'
+                  textShadow: '1px 1px 4px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(77, 142, 255, 0.25), 0 0 16px rgba(77, 142, 255, 0.15)',
+                  filter: 'drop-shadow(0 3px 8px rgba(77, 142, 255, 0.2))'
                 }}
               >
                 AI
@@ -121,30 +121,11 @@ export default function Home() {
               ].map((query, index) => (
                 <div
                   key={index}
-                  className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm hover:shadow-md flex items-start transition-all duration-300 h-full border border-gray-100 dark:border-gray-700"
+                  className="bg-white dark:bg-gray-800 p-4 rounded-xl shadow-sm hover:shadow-md flex items-center transition-all duration-300 h-full border border-gray-100 dark:border-gray-700"
                   role="article"
                   aria-label={`Example query: ${query}`}
                 >
-                  <div className="w-7 h-7 bg-[#4d8eff] rounded-full flex items-center justify-center flex-shrink-0 mr-2 md:w-8 md:h-8 md:mr-3">
-                    <svg 
-                      width="14" 
-                      height="14" 
-                      viewBox="0 0 24 24" 
-                      fill="none" 
-                      xmlns="http://www.w3.org/2000/svg"
-                      aria-hidden="true"
-                    >
-                      <path
-                        d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 13.5997 2.37562 15.1116 3.04346 16.4525C3.22094 16.8088 3.28001 17.2161 3.17712 17.6006L2.58151 19.8267C2.32295 20.793 3.20701 21.677 4.17335 21.4185L6.39939 20.8229C6.78393 20.72 7.19121 20.7791 7.54753 20.9565C8.88837 21.6244 10.4003 22 12 22Z"
-                        stroke="white"
-                        strokeWidth="2"
-                        strokeLinejoin="round"
-                      />
-                      <path d="M8 10.5H16" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      <path d="M8 14H13.5" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                    </svg>
-                  </div>
-                  <p className="text-xs text-gray-800 dark:text-gray-200 self-center md:text-sm">
+                  <p className="text-xs text-gray-800 dark:text-gray-200 md:text-sm">
                     {query}
                   </p>
                 </div>
