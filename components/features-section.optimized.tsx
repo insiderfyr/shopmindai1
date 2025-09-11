@@ -95,9 +95,6 @@ const FeaturesSection = memo(function FeaturesSection() {
                 className="feature-card opacity-0 translate-y-10 transition-all duration-700 ease-out bg-white dark:bg-gray-800 rounded-xl p-6 shadow-sm hover:shadow-md hover:border-blue-200 dark:hover:border-blue-700 border border-gray-100 dark:border-gray-700"
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
-                <div className="mb-4 p-3 bg-blue-50 dark:bg-blue-900/30 rounded-lg inline-block">
-                  <IconComponent className="w-8 h-8 text-[#4d8eff]" aria-hidden="true" />
-                </div>
                 <h3 className="text-xl font-bold mb-2 text-gray-800 dark:text-white">
                   {feature.title}
                 </h3>

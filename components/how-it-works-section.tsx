@@ -72,11 +72,6 @@ const HowItWorksSection = memo(function HowItWorksSection() {
                 className="step-item opacity-0 translate-y-10 transition-all duration-700 ease-out bg-white dark:bg-gray-800 rounded-xl p-8 text-center shadow-sm hover:shadow-md hover:scale-105 transform transition-transform duration-300 border border-gray-100 dark:border-gray-700"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <div className="flex justify-center mb-6">
-                  <div className="w-20 h-20 rounded-full bg-blue-50 dark:bg-blue-900/30 flex items-center justify-center">
-                    <IconComponent className="w-12 h-12 text-[#4d8eff]" aria-hidden="true" />
-                  </div>
-                </div>
                 <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
                   {step.title}
                 </h3>
