@@ -94,12 +94,8 @@ export default function Home() {
 
             <Link
               href="http://localhost:3090/login"
-              className="bg-gradient-to-r from-[#4d8eff] to-[#6d9eff] text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-500 hover:from-[#3a6cd9] hover:to-[#5a7cd9] inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 hover:scale-105 border border-white/20 animate-fade-in-up-delay-4"
+              className="bg-black text-white px-6 py-2.5 rounded-full text-sm font-medium transition-all duration-500 hover:bg-gray-800 inline-block uppercase tracking-wide md:px-8 md:py-3 focus:outline-none border border-white/20 animate-fade-in-up-delay-4"
               aria-label="Start shopping with ShopMindAI"
-              style={{
-                boxShadow: '0 15px 50px rgba(77, 142, 255, 0.4), 0 8px 25px rgba(77, 142, 255, 0.3), 0 0 60px rgba(77, 142, 255, 0.2)',
-                filter: 'drop-shadow(0 10px 30px rgba(77, 142, 255, 0.3))'
-              }}
             >
               Start Shopping
             </Link>

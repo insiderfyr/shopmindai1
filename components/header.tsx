@@ -19,16 +19,10 @@ const Header = memo(function Header() {
     <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-blue-50 dark:bg-[#182533] transition-all duration-300 will-change-transform">
       <div className="flex items-center">
         <div className="w-10 h-10 relative mr-2 md:w-12 md:h-12 md:mr-3 pt-7 transition-all duration-500 ease-out">
-          <Image 
+          <img 
             src="/logo.svg" 
             alt="ShopMind Logo" 
-            fill 
-            className="object-contain transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-3 dark:brightness-110 dark:contrast-110"
-            priority
-            sizes="(max-width: 768px) 40px, 48px"
-            quality={90}
-            placeholder="empty"
-            loading="eager"
+            className="object-contain w-full h-full transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-3 dark:brightness-110 dark:contrast-110"
           />
         </div>
         <h1 className="text-base font-bold tracking-tight md:text-lg transition-all duration-500 ease-out">
@@ -64,7 +58,7 @@ const Header = memo(function Header() {
 
           <Link
             href="/auth"
-            className="bg-[#4d8eff] text-white px-4 py-1.5 rounded-full text-xs font-medium hover:bg-[#3a6cd9] transition-colors duration-300 uppercase tracking-wide md:px-5 md:py-2 md:text-sm focus:outline-none"
+            className="bg-black text-white px-4 py-1.5 rounded-full text-xs font-medium hover:bg-gray-800 transition-colors duration-300 uppercase tracking-wide md:px-5 md:py-2 md:text-sm focus:outline-none"
             aria-label="Log in to your account"
           >
             Log in
