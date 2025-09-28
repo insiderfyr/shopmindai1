@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { memo } from "react"
-import ThemeToggle from "@/components/theme-toggle"
+
 import { useSmoothScroll } from "@/lib/smooth-scroll"
 
 const Header = memo(function Header() {
@@ -18,14 +18,14 @@ const Header = memo(function Header() {
   return (
     <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-blue-50 dark:bg-[#182533] transition-all duration-300 will-change-transform">
       <div className="flex items-center">
-        <div className="w-12 h-12 relative mr-2 md:w-14 md:h-14 md:mr-3 transition-all duration-500 ease-out">
+        <div className="w-14 h-14 relative mr-3 md:w-16 md:h-16 md:mr-4 transition-all duration-500 ease-out">
           <img 
             src="/logo.svg" 
             alt="ShopMind Logo" 
             className="object-contain w-full h-full transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-3 dark:brightness-110 dark:contrast-110"
           />
         </div>
-        <h1 className="text-base font-bold tracking-tight md:text-lg transition-all duration-500 ease-out">
+        <h1 className="text-lg font-bold tracking-tight md:text-xl transition-all duration-500 ease-out">
           <span className="text-black dark:text-white font-sans transition-colors duration-500">
             ShopMind
           </span>
@@ -54,7 +54,7 @@ const Header = memo(function Header() {
         </nav>
 
         <div className="flex items-center space-x-2 md:space-x-3">
-          <ThemeToggle />
+          
 
           <Link
             href="/auth"
