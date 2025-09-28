@@ -59,23 +59,27 @@ const HowItWorksSection = memo(function HowItWorksSection() {
       <div className="max-w-6xl mx-auto">
         <h2 
           id="how-it-works-heading"
-          className="text-3xl md:text-4xl font-bold text-center mb-16 text-gray-800 dark:text-white"
+          className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-800 dark:text-white"
         >
-          How ShopMindAI Works
+          How It Works
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <p className="text-center text-gray-600 dark:text-gray-300 mb-20 max-w-2xl mx-auto">
+          Three simple steps to smarter shopping.
+        </p>
+        <div className="relative flex flex-col md:flex-row items-center justify-between gap-12 md:gap-8">
+          
           {steps.map((step, index) => {
             const IconComponent = step.icon
             return (
               <article
                 key={step.title}
-                className="step-item opacity-0 translate-y-10 transition-all duration-700 ease-out bg-white dark:bg-gray-800 rounded-xl p-8 text-center shadow-sm hover:shadow-md hover:scale-105 transform transition-transform duration-300 border border-gray-100 dark:border-gray-700"
+                className="step-item relative w-full max-w-sm opacity-0 translate-y-10 transform transition-all duration-500 ease-out bg-white dark:bg-gray-800 rounded-2xl p-8 text-center border border-gray-200/50 dark:border-gray-700/50 shadow-lg hover:shadow-xl hover:-translate-y-2"
                 style={{ transitionDelay: `${index * 150}ms` }}
               >
-                <h3 className="text-xl font-bold mb-3 text-gray-800 dark:text-white">
+                <h3 className="text-xl font-semibold mb-2 text-gray-900 dark:text-white">
                   {step.title}
                 </h3>
-                <p className="text-gray-600 dark:text-gray-300">
+                <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
                   {step.description}
                 </p>
               </article>

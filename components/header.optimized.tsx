@@ -7,7 +7,7 @@ const Header = memo(function Header() {
   return (
     <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-[#e6f0ff] dark:bg-[#1a1a2e] bg-transition">
       <div className="flex items-center">
-        <div className="w-14 h-14 relative mr-3 md:w-16 md:h-16 md:mr-4">
+        <div className="w-12 h-12 relative mr-3 md:w-14 md:h-14 md:mr-4">
           <Image 
             src="/logo.svg" 
             alt="ShopMind Logo" 

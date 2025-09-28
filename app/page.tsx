@@ -51,26 +51,14 @@ export default function Home() {
             <h1 
               id="hero-heading"
               className="text-3xl md:text-5xl lg:text-6xl font-bold mb-3 md:mb-4 tracking-tight leading-tight animate-fade-in-up-delay-1"
-              style={{
-                textShadow: '0 2px 8px rgba(0, 0, 0, 0.08), 0 4px 16px rgba(77, 142, 255, 0.1), 0 0 24px rgba(77, 142, 255, 0.05)',
-                filter: 'drop-shadow(0 4px 12px rgba(0, 0, 0, 0.05))'
-              }}
             >
               <span 
                 className="text-black dark:text-white font-sans inline-block animate-slide-in-left"
-                style={{
-                  textShadow: '1px 1px 4px rgba(0, 0, 0, 0.15), 2px 2px 8px rgba(0, 0, 0, 0.1)',
-                  filter: 'drop-shadow(0 2px 6px rgba(0, 0, 0, 0.08))'
-                }}
               >
                 ShopMind
               </span>
               <span 
                 className="text-[#4d8eff] font-sans inline-block animate-slide-in-right"
-                style={{
-                  textShadow: '1px 1px 4px rgba(0, 0, 0, 0.2), 2px 2px 8px rgba(77, 142, 255, 0.25), 0 0 16px rgba(77, 142, 255, 0.15)',
-                  filter: 'drop-shadow(0 3px 8px rgba(77, 142, 255, 0.2))'
-                }}
               >
                 AI
               </span>
