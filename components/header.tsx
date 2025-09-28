@@ -19,12 +19,13 @@ const Header = memo(function Header() {
     <header className="w-full py-3 px-4 md:py-4 md:px-16 flex items-center justify-between sticky top-0 z-10 backdrop-blur-sm bg-opacity-90 dark:bg-opacity-90 bg-blue-50 dark:bg-[#182533] transition-all duration-300 will-change-transform">
       <div className="flex items-center">
         <div className="w-12 h-12 relative mr-3 md:w-14 md:h-14 md:mr-4 transition-all duration-500 ease-out">
-          <Image 
-            src="/logo.svg" 
-            alt="ShopMind Logo" 
+          <Image
+            src="/logo.svg"
+            alt="ShopMind Logo"
             width={56}
             height={56}
             priority
+            unoptimized
             className="object-contain w-full h-full transition-all duration-700 ease-in-out transform hover:scale-110 hover:rotate-3 dark:brightness-110 dark:contrast-110"
           />
         </div>
