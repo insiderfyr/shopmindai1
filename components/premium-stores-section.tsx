@@ -52,6 +52,8 @@ const PremiumStoresSection = memo(function PremiumStoresSection() {
          aria-hidden="true" />
   ))
 
+  SimpleIcon.displayName = 'SimpleIcon'
+
   return (
     <section 
       id="stores" 
